@@ -59,7 +59,9 @@ public class StringStackTest
         //----------------------
         assertEquals("String3",s.pop());
         assertEquals("String2",s.pop());
-        assertEquals("String1",s.pop()); 
+        assertEquals("String1",s.pop());
+
+        assertTrue(s.isEmpty());
 
 
     }
