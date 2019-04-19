@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 public class StringStackTest
 {
     public Stack s;
+    public Stack stack;
     
     @Before
     public void setup() throws Exception
@@ -69,5 +70,11 @@ public class StringStackTest
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
+    @Test (expected = IllegalArgumentException.class)
+    public void testStackCapacity() throws Exception{
+        stack=new StringStack(-1);
+    }
+
+
     
 }
