@@ -9,11 +9,13 @@ public class StringStackTest
 {
     public Stack s;
     public Stack stack;
+    public Stack s2;
     
     @Before
     public void setup() throws Exception
     {
         s = new StringStack(5); // keep size of 5 !!
+        s2 = new StringStack(1);
     }
     
     /**
@@ -73,6 +75,12 @@ public class StringStackTest
     @Test (expected = IllegalArgumentException.class)
     public void testStackCapacity() throws Exception{
         stack=new StringStack(-1);
+    }
+
+    @Test ( expected = IllegalStateException.class)
+    public void testPushInFullStack() throws Exception{
+        s2.push("String1");
+        s2.push("String2");
     }
 
 
