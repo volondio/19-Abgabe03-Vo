@@ -83,6 +83,8 @@ public class StringStackTest
         s2.push("String2");
     }
 
-
-    
+    @Test (expected = IllegalStateException.class)
+    public void testPopfromEmptyStack() throws Exception{
+        s2.pop();
+    }
 }
