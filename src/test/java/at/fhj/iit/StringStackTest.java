@@ -3,8 +3,7 @@ package at.fhj.iit;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class StringStackTest
 {
@@ -54,6 +53,15 @@ public class StringStackTest
     @Test
     public void testPushPop() throws Exception
     {
+        s.push("String1");
+        s.push("String2");
+        s.push("String3");
+        //----------------------
+        assertEquals("String3",s.pop());
+        assertEquals("String2",s.pop());
+        assertEquals("String1",s.pop()); 
+
+
     }
     
     /**
